@@ -3,7 +3,13 @@ const { Sequelize } = require('sequelize');
 
 // TODO - create a Restaurant model
 const Restaurant = sequelize.define("Restaurant",{
-    title: DataTypes.STRING
+    name: DataTypes.STRING,
+    location: DataTypes.STRING,
+    cuisine: DataTypes.STRING,
+    rating: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    }
 })
 
 module.exports = {Restaurant};
